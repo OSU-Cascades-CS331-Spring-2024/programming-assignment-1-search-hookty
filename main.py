@@ -1,4 +1,5 @@
 import os
+import sys
 import map
 
 #parse command line arguments, always preceded with '-'
@@ -66,6 +67,7 @@ def main(argv):
     if Gmap is None:
         setMap()
 
+    print(Gmap)
 
     origins = []
     destinations = []
@@ -83,3 +85,6 @@ def main(argv):
         origins.append(Gmap.findNode(origin))
         destinations.append(Gmap.findNode(destination))
         
+
+if __name__ == '__main__':
+    main(sys.argv)
