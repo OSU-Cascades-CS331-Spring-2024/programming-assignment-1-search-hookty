@@ -9,7 +9,7 @@ class Node:
         x, y = self.convertToXY(lat, lon)
         self.x = x
         self.y = y
-        self.name = name
+        self.name = name.lower()
         self.neighbors = neighbors
 
     def addNeighbor(self, neighbor, travelDistance):
@@ -57,7 +57,7 @@ class Node:
     
     def findNeighbor(self, name):
         for neighbor in self.neighbors:
-            if neighbor.name == name:
+            if neighbor.name == name.lower():
                 return neighbor
         return None
     
@@ -107,8 +107,9 @@ class Map:
 
     def findNode(self, name):
         for node in self.nodes:
-            if node.name == name:
+            if node.name == name.lower():
                 return node
+        print('Node ' + name + ' not found in ' + str(self.nodes))
         return None
     
     def __str__(self):

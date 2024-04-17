@@ -1,14 +1,18 @@
 import os
 import sys
 import map
+import dfs
+import bfs
+import ucs
+import astar
 
 #parse command line arguments, always preceded with '-'
-searchAlgorithm = 'bfs'
+searchAlgorithm = ['bfs']
 searchAlgorithms = ['bfs', 'dfs', 'ucs', 'astar']
 def setSearch(arg):
     global searchAlgorithm
     if arg in searchAlgorithms:
-        searchAlgorithm = arg
+        searchAlgorithm = [arg]
     else:
         print('Invalid search algorithm. Please choose from the following: bfs, dfs, ucs, astar')
         raise SystemExit
@@ -84,6 +88,30 @@ def main(argv):
     else:
         origins.append(Gmap.findNode(origin))
         destinations.append(Gmap.findNode(destination))
+
+    print('Origins: ' + str(origins))
+    print('Destinations: ' + str(destinations))
+
+    for i in range(len(origins)):
+        for algorithm in searchAlgorithm:
+            print('Algorithm: ' + algorithm)
+            print('Origin: ' + origins[i].name)
+            print('Destination: ' + destinations[i].name)
+            print('\n')
+
+            #switch algo
+            if algorithm == 'bfs':
+                algo = bfs.BFS(Gmap, origins[i], destinations[i])
+            elif algorithm == 'dfs':
+                algo = dfs.DFS(Gmap, origins[i], destinations[i])
+            elif algorithm == 'ucs':
+                algo = ucs.UCS(Gmap, origins[i], destinations[i])
+            elif algorithm == 'astar':
+                algo = astar.AStar(Gmap, origins[i], destinations[i])
+
+            output = algo.search()
+
+            print(output)
         
 
 if __name__ == '__main__':
