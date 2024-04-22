@@ -1,0 +1,18 @@
+verynice 43 43 12 N 7 15 59 E --> va-marsigh 197
+tallahasse 43 35 16 N 1 26 38 E --> va-montypython 242 va-waterbordeaux 243 va-limongrass 291
+limongrass 44 51 7 N 1 15 45 E --> va-mgmlyon 409 va-tallahasse 292 va-waterbordeaux 221 va-aunties 320 va-panis 394
+nancydrew 49 41 37 N 6 11 5 E --> va-stressburgh 160 va-mustard 212 va-panis 348 va-callous 479
+mustard 46 19 0 N 5 1 0 E --> va-stressburgh 331 va-mgmlyon 196 va-panis 313 va-nancydrew 212
+stressburgh 47 35 0 N 7 45 0 E --> va-mustard 331 va-nancydrew 160
+cocaen 50 11 0 N 0 22 0 W --> va-callous 350 va-panis 251 va-rneens 185
+mgmlyon 46 46 0 N 4 50 0 E --> va-grenade 114 va-savignonblanc 231 va-limongrass 412 va-mustard 196
+rneens 47 6 53 N 1 40 46 W --> va-cocaen 183 va-panis 347 va-bworst 242 va-aunties 112
+montypython 42 36 43 N 3 52 38 E --> va-savignonblanc 96 va-tallahasse 244
+grenade 44 10 18 N 5 43 21 E --> va-savignonblanc 220 va-mgmlyon 112
+savignonblanc 42 57 0 N 4 49 0 E --> va-grenade 220 va-marsigh 102 va-montypython 96 va-mgmlyon 231
+aunties 47 50 5 N 1 33 10 W --> va-limongrass 320 va-waterbordeaux 350 va-rneens 112
+panis 48 51 24 N 2 21 3 E --> va-callous 295 va-nancydrew 348 va-mustard 315 va-limongrass 394 va-rneens 349 va-cocaen 251
+marsigh 42 17 47 N 5 22 12 E --> va-verynice 200 va-savignonblanc 102
+waterbordeaux 43 35 14 N 5 8 7 E --> va-limongrass 221 va-tallahasse 245 va-aunties 350
+callous 51 30 53 N 1 51 23 E --> va-nancydrew 479 va-panis 295 va-cocaen 350
+bworst 48 23 0 N 5 29 0 W --> va-rneens 242

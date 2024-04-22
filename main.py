@@ -18,12 +18,14 @@ def setSearch(arg):
         raise SystemExit
     
 mapFile = './france.txt'
-Gmap = None
+Gmap = map.Map(mapFile)
 def setMap(arg = None):
     global mapFile
     global Gmap
 
     mapFile = arg if arg is not None else mapFile
+
+    Gmap = None
 
     if os.path.exists(mapFile):
         Gmap = map.Map(mapFile)
@@ -34,8 +36,8 @@ def setMap(arg = None):
 origin = None
 def setOrigin(arg):
     global origin
-    if map.findNode(arg) is not None:
-        origin = map.findNode(arg)
+    if Gmap.findNode(arg) is not None:
+        origin = Gmap.findNode(arg)
     else:
         print('Origin node not found in map.')
         raise SystemExit
@@ -43,14 +45,14 @@ def setOrigin(arg):
 destination = None
 def setDestination(arg):
     global destination
-    if map.findNode(arg) is not None:
-        destination = map.findNode(arg)
+    if Gmap.findNode(arg) is not None:
+        destination = Gmap.findNode(arg)
     else:
         print('Destination node not found in map.')
         raise SystemExit
     
 args = {
-    'm': setMap, #checks for map first to initialize the map
+    'm': setMap, #need checks for map first to initialize the map
     's': setSearch,
     'a': setOrigin,
     'b': setDestination,
@@ -75,7 +77,7 @@ def main(argv):
 
     origins = []
     destinations = []
-    if origin or destination is None: #do them all
+    if origin is None or destination is None: #do them all
         searchAlgorithm = searchAlgorithms 
 
         dests = ["Nice", "Calais", "Bordeaux", "Grenoble", "Paris", "Grenoble", "Brest", "Nantes", "Strasbourg"]
@@ -97,7 +99,6 @@ def main(argv):
             print('Algorithm: ' + algorithm)
             print('Origin: ' + origins[i].name)
             print('Destination: ' + destinations[i].name)
-            print('\n')
 
             #switch algo
             if algorithm == 'bfs':
@@ -111,8 +112,6 @@ def main(argv):
 
             output = algo.search()
 
-            print(output)
-        
-
+            print('Output: ' + str(output) + '\n\n')
 if __name__ == '__main__':
     main(sys.argv)

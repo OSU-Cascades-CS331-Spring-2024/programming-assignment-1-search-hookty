@@ -2,8 +2,8 @@
 
 # Arguments
 -S(earch) {bfs, dls, ucs, astar} // default is bfs, unless A and b are unspecified, then all
--A start // optional
--B destination // optional
+-A start // optional, but must be specified if B is specified
+-B destination // optional, but must be specified if A is specified
 -M(ap) file name of map. // default is ./france.txt
 
 

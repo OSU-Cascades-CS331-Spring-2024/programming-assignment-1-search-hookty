@@ -106,6 +106,8 @@ class Map:
                 self.nodes.append(Node(name, lat, lon, neighbors))
 
     def findNode(self, name):
+        if type(name) is Node:
+            name = name.name
         for node in self.nodes:
             if node.name == name.lower():
                 return node
