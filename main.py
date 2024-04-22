@@ -1,20 +1,20 @@
 import os
 import sys
 import map
-import dfs
+import dls
 import bfs
 import ucs
 import astar
 
 #parse command line arguments, always preceded with '-'
 searchAlgorithm = ['bfs']
-searchAlgorithms = ['bfs', 'dfs', 'ucs', 'astar']
+searchAlgorithms = ['bfs', 'dls', 'ucs', 'astar']
 def setSearch(arg):
     global searchAlgorithm
     if arg in searchAlgorithms:
         searchAlgorithm = [arg]
     else:
-        print('Invalid search algorithm. Please choose from the following: bfs, dfs, ucs, astar')
+        print('Invalid search algorithm. Please choose from the following: bfs, dls, ucs, astar')
         raise SystemExit
     
 mapFile = './france.txt'
@@ -51,11 +51,17 @@ def setDestination(arg):
         print('Destination node not found in map.')
         raise SystemExit
     
+verbose = False
+def setVerbose():
+    global verbose
+    verbose = True
+    
 args = {
     'm': setMap, #need checks for map first to initialize the map
     's': setSearch,
     'a': setOrigin,
     'b': setDestination,
+    'v': setVerbose,
 }
 
 done = []
@@ -65,7 +71,10 @@ def parseArgs(argv):
     for flag in args:
         for i in range(1, len(argv)):
             if argv[i][1].lower() == flag and flag not in done:
-                args[flag](argv[i + 1])
+                if flag == 'v':
+                    args[flag]()
+                else:
+                  args[flag](argv[i + 1])
                 done.append(flag)
 
 def clearFile(openFile):
@@ -137,6 +146,9 @@ def main(argv):
     if Gmap is None:
         setMap()
 
+    if verbose:
+        print(Gmap)
+
     origins = []
     destinations = []
     if origin is None or destination is None: #do them all
@@ -156,7 +168,7 @@ def main(argv):
         destinations.append(Gmap.findNode(destination))
 
     print('Origins: ' + str(origins))
-    print('Destinations: ' + str(destinations))
+    print('Destinations: ' + str(destinations) + '\n')
 
     outPathl = {}
     vsl = {}
@@ -172,28 +184,32 @@ def main(argv):
 
     for i in range(len(origins)):
         for algorithm in searchAlgorithm:
-            print('Algorithm: ' + algorithm)
-            print('Origin: ' + origins[i].name)
-            print('Destination: ' + destinations[i].name)
+            print('Algorithm: ' + algorithm + ', Origin: ' + origins[i].name + ', Destination: ' + destinations[i].name)
 
+            Gmap.reset()
+            
             #switch algo
             if algorithm == 'bfs':
                 algo = bfs.BFS(Gmap, origins[i], destinations[i])
-            elif algorithm == 'dfs':
-                algo = dfs.DFS(Gmap, origins[i], destinations[i])
+            elif algorithm == 'dls':
+                algo = dls.DLS(Gmap, origins[i], destinations[i])
             elif algorithm == 'ucs':
                 algo = ucs.UCS(Gmap, origins[i], destinations[i])
             elif algorithm == 'astar':
                 algo = astar.AStar(Gmap, origins[i], destinations[i])
 
-            outPath, vs, ss, fr = algo.search()
+            ao = algo.search()
+            outPath, vs, ss, fr = ao
 
-            #print('outPath: ' + str(outPath) + '\n\n')
-            f = 0
-            for node in outPath:
-                print('Node ' + str(f) + ': ' + str(node) + ' Cost: ' + str(node.cost))
-                f += 1
-            print('\n\n')
+            if verbose:
+                f = 0
+                for node in outPath:
+                    print('Node ' + str(f) + ': ' + str(node) + ' Cost: ' + str(node.cost))
+                    f += 1
+            else:
+                print('Path: ' + str([node.name for node in outPath]))
+
+            print('\n')
 
             writeOut(outPath, vs, ss, fr, algorithm)
 

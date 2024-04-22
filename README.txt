@@ -4,10 +4,10 @@ bfs
 3.0 // avg frontier
 1 // wins
 
-dfs
-11.67 // avg visited
-15.0 // avg successors
-5.33 // avg frontier
+dls
+14.44 // avg visited
+16.22 // avg successors
+3.78 // avg frontier
 1 // wins
 
 ucs

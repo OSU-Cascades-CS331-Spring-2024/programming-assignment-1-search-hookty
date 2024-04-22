@@ -6,9 +6,12 @@ class Node:
         #lat and lon are in dms, like (degrees, minutes, seconds, direction)
         self.lat = lat 
         self.latD = 0
+
         self.lon = lon
         self.lonD = 0
+
         x, y = self.convertToXY(lat, lon)
+        
         self.x = x
         self.y = y
         self.cost = 0
@@ -123,6 +126,10 @@ class Map:
                 return node
         print('Node ' + name + ' not found in ' + str(self.nodes))
         return None
+    
+    def reset(self):
+        for node in self.nodes:
+            node.cost = 0
     
     def __str__(self):
         string = ''

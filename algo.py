@@ -42,7 +42,7 @@ class Algorithm:
             self.totalVisited += 1
             
             if node == self.destination:
-                self.path = self.getPath(node)
+                self.path = self.getPath(node) #.append(node)
                 return self.path, self.totalVisited, self.totalSuccessors, self.totalFrontier
             
             for edge in node.neighbors:
@@ -57,7 +57,7 @@ class Algorithm:
                     neighbor.cost = node.cost + node.neighbors[edge]
 
             self.totalFrontier = len(self.frontier)
-            
+
         return None
     
     def __str__(self):
