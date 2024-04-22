@@ -115,12 +115,12 @@ def writeAvg(i1, i2, i3, i4):
     wins = {}
 
     for algorithm in searchAlgorithm:
-        for journey in i4[algorithm]:
-            if journey == min(i4[algorithm]):
-                if algorithm in wins:
-                    wins[algorithm] += 1
-                else:
-                    wins[algorithm] = 1
+        wins[algorithm] = 0
+
+    for i in range(len(i4['bfs'])):
+        for algorithm in searchAlgorithm:
+            if i4[algorithm][i] == min([i4[a][i] for a in searchAlgorithm]):
+                wins[algorithm] += 1
 
     for algorithm in searchAlgorithm:
         file2.write(algorithm + '\n')
@@ -186,7 +186,7 @@ def main(argv):
         for algorithm in searchAlgorithm:
             print('Algorithm: ' + algorithm + ', Origin: ' + origins[i].name + ', Destination: ' + destinations[i].name)
 
-            Gmap.reset()
+            Gmap.reset(verbose)
             
             #switch algo
             if algorithm == 'bfs':
@@ -198,7 +198,7 @@ def main(argv):
             elif algorithm == 'astar':
                 algo = astar.AStar(Gmap, origins[i], destinations[i])
 
-            ao = algo.search()
+            ao = algo.search(verbose)
             outPath, vs, ss, fr = ao
 
             if verbose:

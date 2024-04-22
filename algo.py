@@ -35,9 +35,13 @@ class Algorithm:
             node = self.nodeParents.get(node)
         return path[::-1]
     
-    def search(self):
+    def search(self, verbose = False):
         while self.frontier:
-            node = self.chooseNode()
+            node = self.chooseNode(verbose)
+
+            if verbose:
+                print('Visiting: ' + str(node))
+
             self.visited.append(node)
             self.totalVisited += 1
             
@@ -68,3 +72,18 @@ class Algorithm:
     
     def __repr__(self):
         return str(self)
+    
+    def sortedFrontier(self, verbose = False):
+        sorted = []
+        for node in self.frontier:
+            for i in range(len(sorted)):
+                if node.cost < sorted[i].cost:
+                    sorted.insert(i, node)
+                    break
+            else:
+                sorted.append(node)
+
+        if verbose:
+            print('Sorted frontier: ' + str(sorted))\
+            
+        return sorted

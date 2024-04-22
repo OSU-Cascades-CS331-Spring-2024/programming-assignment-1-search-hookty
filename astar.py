@@ -8,7 +8,11 @@ class AStar(algo.Algorithm):
         # straight line distance
         return node1.distanceTo(node2)
         
-    def chooseNode(self):
+    def chooseNode(self, verbose = False):
+        sorted = self.sortedFrontier(verbose)
         # get lowest sum of cost and heuristic
-        node = min(self.frontier, key=lambda node: node.cost + self.heuristic(node, self.destination))
+        node = sorted[0]
         return self.frontier.pop(self.frontier.index(node))
+    
+    def search(self, verbose = False):
+        return super().search(verbose)

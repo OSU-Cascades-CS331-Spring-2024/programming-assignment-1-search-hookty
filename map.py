@@ -22,7 +22,7 @@ class Node:
         self.neighbors[neighbor] = travelDistance
 
     def __str__(self):
-        return str(self.name + ' ' + str(round(self.latD, 2)) + ' ' + str(round(self.lonD, 2)))
+        return str(self.name + ' ' + str(round(self.latD, 2)) + ' ' + str(round(self.lonD, 2)) + ' ' + str(self.cost))
     
     def __repr__(self):
         return str(self)
@@ -127,8 +127,10 @@ class Map:
         print('Node ' + name + ' not found in ' + str(self.nodes))
         return None
     
-    def reset(self):
+    def reset(self, verbose = False):
         for node in self.nodes:
+            if verbose and node.cost != 0:
+                print('Final Cost of ' + str(node) + ': ' + str(node.cost))
             node.cost = 0
     
     def __str__(self):
