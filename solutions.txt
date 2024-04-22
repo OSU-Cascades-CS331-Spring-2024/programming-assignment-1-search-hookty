@@ -1,0 +1,397 @@
+bfs
+brest 48.38 -5.48
+rennes 47.11 -1.68
+paris 48.86 2.35
+dijon 46.32 5.02
+lyon 46.77 4.83
+avignon 42.95 4.82
+marseille 42.3 5.37
+nice 43.72 7.27
+18 // visited
+17 // successors
+1 // frontier
+
+dfs
+brest 48.38 -5.48
+rennes 47.11 -1.68
+nantes 47.83 -1.55
+bordeaux 43.59 5.14
+toulouse 43.59 1.44
+montpellier 42.61 3.88
+avignon 42.95 4.82
+marseille 42.3 5.37
+nice 43.72 7.27
+14 // visited
+17 // successors
+5 // frontier
+
+ucs
+brest 48.38 -5.48
+rennes 47.11 -1.68
+nantes 47.83 -1.55
+limoges 44.85 1.26
+lyon 46.77 4.83
+avignon 42.95 4.82
+marseille 42.3 5.37
+nice 43.72 7.27
+18 // visited
+17 // successors
+1 // frontier
+
+astar
+brest 48.38 -5.48
+rennes 47.11 -1.68
+paris 48.86 2.35
+dijon 46.32 5.02
+lyon 46.77 4.83
+avignon 42.95 4.82
+marseille 42.3 5.37
+nice 43.72 7.27
+9 // visited
+15 // successors
+8 // frontier
+
+bfs
+montpellier 42.61 3.88
+toulouse 43.59 1.44
+limoges 44.85 1.26
+paris 48.86 2.35
+calais 51.51 1.86
+16 // visited
+17 // successors
+3 // frontier
+
+dfs
+montpellier 42.61 3.88
+toulouse 43.59 1.44
+limoges 44.85 1.26
+paris 48.86 2.35
+calais 51.51 1.86
+11 // visited
+14 // successors
+5 // frontier
+
+ucs
+montpellier 42.61 3.88
+avignon 42.95 4.82
+lyon 46.77 4.83
+dijon 46.32 5.02
+nancy 49.69 6.18
+calais 51.51 1.86
+17 // visited
+17 // successors
+2 // frontier
+
+astar
+montpellier 42.61 3.88
+toulouse 43.59 1.44
+limoges 44.85 1.26
+paris 48.86 2.35
+calais 51.51 1.86
+5 // visited
+12 // successors
+9 // frontier
+
+bfs
+strasbourg 47.58 7.75
+dijon 46.32 5.02
+lyon 46.77 4.83
+limoges 44.85 1.26
+bordeaux 43.59 5.14
+15 // visited
+17 // successors
+4 // frontier
+
+dfs
+strasbourg 47.58 7.75
+nancy 49.69 6.18
+calais 51.51 1.86
+caen 50.18 -0.37
+rennes 47.11 -1.68
+nantes 47.83 -1.55
+bordeaux 43.59 5.14
+7 // visited
+10 // successors
+5 // frontier
+
+ucs
+strasbourg 47.58 7.75
+nancy 49.69 6.18
+paris 48.86 2.35
+limoges 44.85 1.26
+bordeaux 43.59 5.14
+18 // visited
+17 // successors
+1 // frontier
+
+astar
+strasbourg 47.58 7.75
+dijon 46.32 5.02
+lyon 46.77 4.83
+avignon 42.95 4.82
+montpellier 42.61 3.88
+toulouse 43.59 1.44
+bordeaux 43.59 5.14
+10 // visited
+12 // successors
+4 // frontier
+
+bfs
+paris 48.86 2.35
+dijon 46.32 5.02
+lyon 46.77 4.83
+grenoble 44.17 5.72
+14 // visited
+15 // successors
+3 // frontier
+
+dfs
+paris 48.86 2.35
+rennes 47.11 -1.68
+nantes 47.83 -1.55
+bordeaux 43.59 5.14
+toulouse 43.59 1.44
+montpellier 42.61 3.88
+avignon 42.95 4.82
+grenoble 44.17 5.72
+12 // visited
+16 // successors
+6 // frontier
+
+ucs
+paris 48.86 2.35
+dijon 46.32 5.02
+lyon 46.77 4.83
+grenoble 44.17 5.72
+12 // visited
+14 // successors
+4 // frontier
+
+astar
+paris 48.86 2.35
+dijon 46.32 5.02
+lyon 46.77 4.83
+grenoble 44.17 5.72
+4 // visited
+10 // successors
+8 // frontier
+
+bfs
+grenoble 44.17 5.72
+lyon 46.77 4.83
+limoges 44.85 1.26
+paris 48.86 2.35
+12 // visited
+14 // successors
+4 // frontier
+
+dfs
+grenoble 44.17 5.72
+lyon 46.77 4.83
+dijon 46.32 5.02
+paris 48.86 2.35
+13 // visited
+15 // successors
+4 // frontier
+
+ucs
+grenoble 44.17 5.72
+lyon 46.77 4.83
+dijon 46.32 5.02
+paris 48.86 2.35
+11 // visited
+14 // successors
+5 // frontier
+
+astar
+grenoble 44.17 5.72
+lyon 46.77 4.83
+dijon 46.32 5.02
+paris 48.86 2.35
+4 // visited
+7 // successors
+5 // frontier
+
+bfs
+brest 48.38 -5.48
+rennes 47.11 -1.68
+paris 48.86 2.35
+dijon 46.32 5.02
+lyon 46.77 4.83
+grenoble 44.17 5.72
+14 // visited
+15 // successors
+3 // frontier
+
+dfs
+brest 48.38 -5.48
+rennes 47.11 -1.68
+nantes 47.83 -1.55
+bordeaux 43.59 5.14
+toulouse 43.59 1.44
+montpellier 42.61 3.88
+avignon 42.95 4.82
+grenoble 44.17 5.72
+15 // visited
+17 // successors
+4 // frontier
+
+ucs
+brest 48.38 -5.48
+rennes 47.11 -1.68
+nantes 47.83 -1.55
+limoges 44.85 1.26
+lyon 46.77 4.83
+grenoble 44.17 5.72
+13 // visited
+15 // successors
+4 // frontier
+
+astar
+brest 48.38 -5.48
+rennes 47.11 -1.68
+paris 48.86 2.35
+dijon 46.32 5.02
+lyon 46.77 4.83
+grenoble 44.17 5.72
+6 // visited
+12 // successors
+8 // frontier
+
+bfs
+grenoble 44.17 5.72
+lyon 46.77 4.83
+limoges 44.85 1.26
+nantes 47.83 -1.55
+rennes 47.11 -1.68
+brest 48.38 -5.48
+18 // visited
+17 // successors
+1 // frontier
+
+dfs
+grenoble 44.17 5.72
+lyon 46.77 4.83
+dijon 46.32 5.02
+nancy 49.69 6.18
+calais 51.51 1.86
+caen 50.18 -0.37
+rennes 47.11 -1.68
+brest 48.38 -5.48
+12 // visited
+15 // successors
+5 // frontier
+
+ucs
+grenoble 44.17 5.72
+lyon 46.77 4.83
+dijon 46.32 5.02
+paris 48.86 2.35
+rennes 47.11 -1.68
+brest 48.38 -5.48
+18 // visited
+17 // successors
+1 // frontier
+
+astar
+grenoble 44.17 5.72
+lyon 46.77 4.83
+limoges 44.85 1.26
+nantes 47.83 -1.55
+rennes 47.11 -1.68
+brest 48.38 -5.48
+6 // visited
+11 // successors
+7 // frontier
+
+bfs
+nice 43.72 7.27
+marseille 42.3 5.37
+avignon 42.95 4.82
+lyon 46.77 4.83
+limoges 44.85 1.26
+nantes 47.83 -1.55
+11 // visited
+13 // successors
+4 // frontier
+
+dfs
+nice 43.72 7.27
+marseille 42.3 5.37
+avignon 42.95 4.82
+lyon 46.77 4.83
+dijon 46.32 5.02
+nancy 49.69 6.18
+calais 51.51 1.86
+caen 50.18 -0.37
+rennes 47.11 -1.68
+nantes 47.83 -1.55
+10 // visited
+15 // successors
+7 // frontier
+
+ucs
+nice 43.72 7.27
+marseille 42.3 5.37
+avignon 42.95 4.82
+montpellier 42.61 3.88
+toulouse 43.59 1.44
+bordeaux 43.59 5.14
+nantes 47.83 -1.55
+14 // visited
+16 // successors
+4 // frontier
+
+astar
+nice 43.72 7.27
+marseille 42.3 5.37
+avignon 42.95 4.82
+lyon 46.77 4.83
+limoges 44.85 1.26
+nantes 47.83 -1.55
+6 // visited
+11 // successors
+7 // frontier
+
+bfs
+caen 50.18 -0.37
+calais 51.51 1.86
+nancy 49.69 6.18
+strasbourg 47.58 7.75
+10 // visited
+12 // successors
+4 // frontier
+
+dfs
+caen 50.18 -0.37
+rennes 47.11 -1.68
+nantes 47.83 -1.55
+bordeaux 43.59 5.14
+toulouse 43.59 1.44
+montpellier 42.61 3.88
+avignon 42.95 4.82
+lyon 46.77 4.83
+dijon 46.32 5.02
+strasbourg 47.58 7.75
+11 // visited
+16 // successors
+7 // frontier
+
+ucs
+caen 50.18 -0.37
+paris 48.86 2.35
+dijon 46.32 5.02
+strasbourg 47.58 7.75
+13 // visited
+14 // successors
+3 // frontier
+
+astar
+caen 50.18 -0.37
+paris 48.86 2.35
+nancy 49.69 6.18
+strasbourg 47.58 7.75
+4 // visited
+7 // successors
+5 // frontier
+

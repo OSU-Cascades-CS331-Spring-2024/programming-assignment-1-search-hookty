@@ -5,10 +5,13 @@ class Node:
     def __init__(self, name, lat, lon, neighbors = {}):
         #lat and lon are in dms, like (degrees, minutes, seconds, direction)
         self.lat = lat 
+        self.latD = 0
         self.lon = lon
+        self.lonD = 0
         x, y = self.convertToXY(lat, lon)
         self.x = x
         self.y = y
+        self.cost = 0
         self.name = name.lower()
         self.neighbors = neighbors
 
@@ -16,7 +19,7 @@ class Node:
         self.neighbors[neighbor] = travelDistance
 
     def __str__(self):
-        return str(self.name + ' ' + str(round(self.x, 2)) + ' ' + str(round(self.y, 2)))
+        return str(self.name + ' ' + str(round(self.latD, 2)) + ' ' + str(round(self.lonD, 2)))
     
     def __repr__(self):
         return str(self)
@@ -31,7 +34,7 @@ class Node:
             sign = 1
         else:
             sign = -1
-
+        
         return sign * (int(dms[0]) + int(dms[1]) * mToD + int(dms[2]) * sToD)
 
     def convertToXY(self, lat, lon):
@@ -40,6 +43,9 @@ class Node:
 
         dlat = self.dmsToDecimal(lat)
         dlon = self.dmsToDecimal(lon)
+
+        self.latD = dlat
+        self.lonD = dlon
 
         #convert to radians
         lat = math.radians(dlat)
@@ -52,8 +58,12 @@ class Node:
 
         return x, y
     
-    def distanceTo(self, node):
+    def distanceToR(self, node):
         return math.sqrt((self.x - node.x)**2 + (self.y - node.y)**2)
+    
+    def distanceTo(self, node):
+        #scales back to kilometers from x, y
+        return self.distanceToR(node) * 1000
     
     def findNeighbor(self, name):
         for neighbor in self.neighbors:

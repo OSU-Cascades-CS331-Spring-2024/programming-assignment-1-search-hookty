@@ -1,3 +1,5 @@
+import random
+
 class Algorithm:
     def __init__(self, map, origin, destination):
         self.map = map
@@ -12,12 +14,19 @@ class Algorithm:
         
         self.nodeParents = {}
         self.path = []
+
         self.cost = 0
+
+        #statistic variables
+        self.totalVisited = 0
+        self.totalSuccessors = 0
+        self.totalFrontier = 0
+
 
     # needs to be overridden by subclasses
     def chooseNode(self):
-        print('Algorithm not implemented!')
-        return None
+        print('Algorithm not implemented! Randomly choosing node.')
+        return self.frontier.pop(random.randint(0, len(self.frontier) - 1))
 
     def getPath(self, node):
         path = []
@@ -29,12 +38,12 @@ class Algorithm:
     def search(self):
         while self.frontier:
             node = self.chooseNode()
-           
             self.visited.append(node)
+            self.totalVisited += 1
             
             if node == self.destination:
                 self.path = self.getPath(node)
-                return self.path
+                return self.path, self.totalVisited, self.totalSuccessors, self.totalFrontier
             
             for edge in node.neighbors:
                 neighbor = self.map.findNode(edge)
@@ -42,7 +51,13 @@ class Algorithm:
                     self.nodeParents[neighbor] = node 
                     self.frontier.append(neighbor)
                     self.visited.append(neighbor)
+                    self.totalSuccessors += 1
 
+                    #set the cost of the neighbor
+                    neighbor.cost = node.cost + node.neighbors[edge]
+
+            self.totalFrontier = len(self.frontier)
+            
         return None
     
     def __str__(self):
