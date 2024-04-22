@@ -12,6 +12,9 @@ class AStar(algo.Algorithm):
         sorted = self.sortedFrontier(verbose)
         # get lowest sum of cost and heuristic
         node = sorted[0]
+        for n in sorted:
+            if n.cost + self.heuristic(n, self.destination) < node.cost + self.heuristic(node, self.destination):
+                node = n
         return self.frontier.pop(self.frontier.index(node))
     
     def search(self, verbose = False):

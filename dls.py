@@ -2,7 +2,7 @@ import algo
 
 class DLS(algo.Algorithm):
     def __init__(self, map, origin, destination):
-        frac = 3
+        frac = 4
         self.max_depth = int(len(map.nodes) / frac)
         self.current_depth = self.max_depth
         super().__init__(map, origin, destination)

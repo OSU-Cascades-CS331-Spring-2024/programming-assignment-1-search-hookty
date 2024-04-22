@@ -14,16 +14,17 @@ nice 43.72 7.27 1633
 dls
 brest 48.38 -5.48 0
 rennes 47.11 -1.68 242
-nantes 47.83 -1.55 354
-bordeaux 43.59 5.14 704
-toulouse 43.59 1.44 949
-montpellier 42.61 3.88 1191
-avignon 42.95 4.82 1287
-marseille 42.3 5.37 1389
-nice 43.72 7.27 1589
-17 // visited
+caen 50.18 -0.37 425
+calais 51.51 1.86 775
+nancy 49.69 6.18 1254
+dijon 46.32 5.02 1466
+lyon 46.77 4.83 1662
+avignon 42.95 4.82 1893
+marseille 42.3 5.37 1995
+nice 43.72 7.27 2195
+14 // visited
 17 // successors
-2 // frontier
+5 // frontier
 
 ucs
 brest 48.38 -5.48 0
@@ -41,15 +42,15 @@ nice 43.72 7.27 1616
 astar
 brest 48.38 -5.48 0
 rennes 47.11 -1.68 242
-nantes 47.83 -1.55 354
-limoges 44.85 1.26 674
-lyon 46.77 4.83 1083
-avignon 42.95 4.82 1314
-marseille 42.3 5.37 1416
-nice 43.72 7.27 1616
-18 // visited
-17 // successors
-1 // frontier
+paris 48.86 2.35 589
+dijon 46.32 5.02 904
+lyon 46.77 4.83 1100
+avignon 42.95 4.82 1331
+marseille 42.3 5.37 1433
+nice 43.72 7.27 1633
+9 // visited
+15 // successors
+8 // frontier
 
 bfs
 montpellier 42.61 3.88 0
@@ -67,9 +68,9 @@ toulouse 43.59 1.44 244
 limoges 44.85 1.26 535
 paris 48.86 2.35 929
 calais 51.51 1.86 1224
-16 // visited
+17 // visited
 17 // successors
-3 // frontier
+2 // frontier
 
 ucs
 montpellier 42.61 3.88 0
@@ -84,14 +85,13 @@ calais 51.51 1.86 1214
 
 astar
 montpellier 42.61 3.88 0
-avignon 42.95 4.82 96
-lyon 46.77 4.83 327
-dijon 46.32 5.02 523
-nancy 49.69 6.18 735
-calais 51.51 1.86 1214
-17 // visited
-17 // successors
-2 // frontier
+toulouse 43.59 1.44 244
+limoges 44.85 1.26 535
+paris 48.86 2.35 929
+calais 51.51 1.86 1224
+5 // visited
+12 // successors
+9 // frontier
 
 bfs
 strasbourg 47.58 7.75 0
@@ -105,15 +105,13 @@ bordeaux 43.59 5.14 1160
 
 dls
 strasbourg 47.58 7.75 0
-nancy 49.69 6.18 160
-calais 51.51 1.86 639
-caen 50.18 -0.37 989
-rennes 47.11 -1.68 1174
-nantes 47.83 -1.55 1286
-bordeaux 43.59 5.14 1636
-16 // visited
-17 // successors
-3 // frontier
+dijon 46.32 5.02 331
+lyon 46.77 4.83 527
+limoges 44.85 1.26 939
+bordeaux 43.59 5.14 1160
+9 // visited
+13 // successors
+6 // frontier
 
 ucs
 strasbourg 47.58 7.75 0
@@ -127,13 +125,15 @@ bordeaux 43.59 5.14 1123
 
 astar
 strasbourg 47.58 7.75 0
-nancy 49.69 6.18 160
-paris 48.86 2.35 508
-limoges 44.85 1.26 902
-bordeaux 43.59 5.14 1123
-18 // visited
-17 // successors
-1 // frontier
+dijon 46.32 5.02 331
+lyon 46.77 4.83 527
+avignon 42.95 4.82 758
+montpellier 42.61 3.88 854
+toulouse 43.59 1.44 1098
+bordeaux 43.59 5.14 1341
+10 // visited
+12 // successors
+4 // frontier
 
 bfs
 paris 48.86 2.35 0
@@ -153,9 +153,9 @@ toulouse 43.59 1.44 1056
 montpellier 42.61 3.88 1298
 avignon 42.95 4.82 1394
 grenoble 44.17 5.72 1614
-13 // visited
-16 // successors
-5 // frontier
+16 // visited
+17 // successors
+3 // frontier
 
 ucs
 paris 48.86 2.35 0
@@ -171,9 +171,9 @@ paris 48.86 2.35 0
 dijon 46.32 5.02 315
 lyon 46.77 4.83 511
 grenoble 44.17 5.72 625
-12 // visited
-14 // successors
-4 // frontier
+4 // visited
+10 // successors
+8 // frontier
 
 bfs
 grenoble 44.17 5.72 0
@@ -189,9 +189,9 @@ grenoble 44.17 5.72 0
 lyon 46.77 4.83 112
 dijon 46.32 5.02 308
 paris 48.86 2.35 621
-17 // visited
+18 // visited
 17 // successors
-2 // frontier
+1 // frontier
 
 ucs
 grenoble 44.17 5.72 0
@@ -207,8 +207,8 @@ grenoble 44.17 5.72 0
 lyon 46.77 4.83 112
 dijon 46.32 5.02 308
 paris 48.86 2.35 621
-11 // visited
-14 // successors
+4 // visited
+7 // successors
 5 // frontier
 
 bfs
@@ -231,9 +231,9 @@ nancy 49.69 6.18 1254
 dijon 46.32 5.02 1466
 lyon 46.77 4.83 1662
 grenoble 44.17 5.72 1776
-12 // visited
-15 // successors
-5 // frontier
+16 // visited
+17 // successors
+3 // frontier
 
 ucs
 brest 48.38 -5.48 0
@@ -249,13 +249,13 @@ grenoble 44.17 5.72 1197
 astar
 brest 48.38 -5.48 0
 rennes 47.11 -1.68 242
-nantes 47.83 -1.55 354
-limoges 44.85 1.26 674
-lyon 46.77 4.83 1083
-grenoble 44.17 5.72 1197
-13 // visited
-15 // successors
-4 // frontier
+paris 48.86 2.35 589
+dijon 46.32 5.02 904
+lyon 46.77 4.83 1100
+grenoble 44.17 5.72 1214
+6 // visited
+12 // successors
+8 // frontier
 
 bfs
 grenoble 44.17 5.72 0
@@ -270,16 +270,16 @@ brest 48.38 -5.48 1198
 
 dls
 grenoble 44.17 5.72 0
-lyon 46.77 4.83 112
-dijon 46.32 5.02 308
-nancy 49.69 6.18 520
-calais 51.51 1.86 999
-caen 50.18 -0.37 1349
-rennes 47.11 -1.68 1534
-brest 48.38 -5.48 1776
-16 // visited
-17 // successors
-3 // frontier
+avignon 42.95 4.82 220
+montpellier 42.61 3.88 316
+toulouse 43.59 1.44 560
+bordeaux 43.59 5.14 803
+nantes 47.83 -1.55 1153
+rennes 47.11 -1.68 1265
+brest 48.38 -5.48 1507
+12 // visited
+16 // successors
+6 // frontier
 
 ucs
 grenoble 44.17 5.72 0
@@ -295,13 +295,13 @@ brest 48.38 -5.48 1212
 astar
 grenoble 44.17 5.72 0
 lyon 46.77 4.83 112
-dijon 46.32 5.02 308
-paris 48.86 2.35 621
-rennes 47.11 -1.68 970
-brest 48.38 -5.48 1212
-18 // visited
-17 // successors
-1 // frontier
+limoges 44.85 1.26 524
+nantes 47.83 -1.55 844
+rennes 47.11 -1.68 956
+brest 48.38 -5.48 1198
+6 // visited
+11 // successors
+7 // frontier
 
 bfs
 nice 43.72 7.27 0
@@ -318,16 +318,13 @@ dls
 nice 43.72 7.27 0
 marseille 42.3 5.37 197
 avignon 42.95 4.82 299
-lyon 46.77 4.83 530
-dijon 46.32 5.02 726
-nancy 49.69 6.18 938
-calais 51.51 1.86 1417
-caen 50.18 -0.37 1767
-rennes 47.11 -1.68 1952
-nantes 47.83 -1.55 2064
-11 // visited
-15 // successors
-6 // frontier
+montpellier 42.61 3.88 395
+toulouse 43.59 1.44 639
+bordeaux 43.59 5.14 882
+nantes 47.83 -1.55 1232
+13 // visited
+16 // successors
+5 // frontier
 
 ucs
 nice 43.72 7.27 0
@@ -345,13 +342,12 @@ astar
 nice 43.72 7.27 0
 marseille 42.3 5.37 197
 avignon 42.95 4.82 299
-montpellier 42.61 3.88 395
-toulouse 43.59 1.44 639
-bordeaux 43.59 5.14 882
-nantes 47.83 -1.55 1232
-14 // visited
-16 // successors
-4 // frontier
+lyon 46.77 4.83 530
+limoges 44.85 1.26 942
+nantes 47.83 -1.55 1262
+6 // visited
+11 // successors
+7 // frontier
 
 bfs
 caen 50.18 -0.37 0
@@ -367,9 +363,9 @@ caen 50.18 -0.37 0
 calais 51.51 1.86 350
 nancy 49.69 6.18 829
 strasbourg 47.58 7.75 989
-12 // visited
-15 // successors
-5 // frontier
+16 // visited
+17 // successors
+3 // frontier
 
 ucs
 caen 50.18 -0.37 0
@@ -383,9 +379,9 @@ strasbourg 47.58 7.75 897
 astar
 caen 50.18 -0.37 0
 paris 48.86 2.35 251
-dijon 46.32 5.02 566
-strasbourg 47.58 7.75 897
-13 // visited
-14 // successors
-3 // frontier
+nancy 49.69 6.18 599
+strasbourg 47.58 7.75 759
+4 // visited
+7 // successors
+5 // frontier
 
